@@ -6,17 +6,20 @@
   <body>
     <form action="">
       <h1>Coding Form!</h1>
-      <div>Email</div>
-      <input type="text">
+
+      <label for="emailInput">Email</label>
+      <div><input type="text" id="emailInput"></div>
 
 
-      <div>Why is coding cool?</div>
-      <select name= "coding-reasons">
-        <option value="">Select an option</option>
-        <option value="interesting">Because it's interesting</option>
-        <option value="cool">Because it's cool</option>
-        <option value="powerful">Because it's powerful</option>
-      </select>
+      <label for = "reasonsSelect">Why is coding cool?</label>
+      <div>
+        <select name="coding-reasons" id="reasonsSelect">
+          <option value="">Select an option</option>
+          <option value="interesting">Because it's interesting</option>
+          <option value="cool">Because it's cool</option>
+          <option value="powerful">Because it's powerful</option>
+        </select>
+      </div>
 
 
       <div>Favorite Language (choose one)</div>
@@ -35,8 +38,13 @@
       <label for="signup">Sign me up!</label>
 
 
-      <div>Comments</div>
-      <textarea name = "Comments" cols="30" rows="8"></textarea>
+      <div>
+        <label for="commentInput">Comments</label>
+      </div>
+      <div>
+              <textarea name="Comments" id="commentInput" cols="30" rows="8"></textarea>
+      </div>
+
 
       <div><input type="submit" name="submit" value="Submit"></div>
     </form>
