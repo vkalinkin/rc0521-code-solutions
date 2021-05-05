@@ -1,0 +1,22 @@
+button {
+  padding: 10px 25px;
+  font: 20px Arial, sans-serif;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+table {
+  border: 2px solid white;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(211, 209, 209, 0.842);
+}
