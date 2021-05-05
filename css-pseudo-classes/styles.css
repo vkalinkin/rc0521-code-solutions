@@ -17,6 +17,6 @@ th {
   color: white;
 }
 
-.even {
-  background-color: rgb(194, 189, 189);
+tr:nth-child(odd) {
+  background-color: rgba(211, 209, 209, 0.842);
 }
