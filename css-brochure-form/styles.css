@@ -1,0 +1,59 @@
+/* AtlasGrotesk */
+
+/* Brandon Grotesque */
+
+h2 {
+  text-align: center;
+  color: rgb(233, 104, 87);
+  font-family: 'AtlasGrotesk', 'Arial', sans-serif;
+  letter-spacing: 1px;
+}
+
+label {
+  font-family: 'Brandon Grotesque', 'Arial', sans-serif;
+  margin-left: 8px;
+}
+
+.container {
+  margin: auto;
+  max-width: 550px;
+  text-align: left;
+}
+
+.row {
+  text-align: left;
+}
+
+input {
+  margin-bottom: 10px;
+  height: 30px;
+  border-radius: 4px;
+  font-family: 'AtlasGrotesk', 'Arial', sans-serif;
+}
+
+input,
+select {
+  width: 550px;
+  height: 30px;
+  font-family: 'AtlasGrotesk', 'Arial', sans-serif;
+}
+
+button {
+  background-color: rgb(233, 104, 87);
+  color: white;
+  font-family: 'Brandon Grotesque', 'Arial', sans-serif;
+
+  /* text-align: right; */
+  border-radius: 30px;
+  border: none;
+  padding: 200px, 400px;
+
+  /* margin-left: 490px; */
+  width: 100px;
+  height: 30px;
+}
+
+.button-cont {
+  text-align: right;
+  margin-top: 10px;
+}
