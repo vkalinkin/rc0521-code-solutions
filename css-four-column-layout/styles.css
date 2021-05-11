@@ -1,0 +1,45 @@
+* {
+  background-color: #f7f8fa;
+}
+
+h2 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.column-25-percent {
+  flex-basis: 25%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.app-pic {
+  max-width: 100%;
+}
+
+.feature-logo {
+  max-width: 20%;
+}
