@@ -1,0 +1,43 @@
+.container {
+  font-family: 'DM Sans', 'Arial', sans-serif;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.column-product {
+  flex-basis: 20%;
+  max-width: 220px;
+  padding: 5px;
+}
+
+.picture {
+  max-width: 100%;
+}
+
+.mini-row {
+  margin-top: 10px;
+}
+
+.top-right {
+  color: #d3d3d3;
+}
+
+.bottom-right {
+  color: #d3d3d3;
+  text-decoration: line-through;
+}
+
+.bottom-left {
+  background-color: #fff2e7;
+}
