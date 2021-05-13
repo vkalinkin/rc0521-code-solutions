@@ -1,10 +1,11 @@
 /* exported getKeys */
 function getKeys(object) {
   var keys = [];
-  var count = 0;
+  // var count = 0;
   for (var key in object) {
-    keys[count] = key;
-    count++;
+    // keys[count] = key;
+    // count++;
+    keys.push(key);
   }
   return keys;
 }
