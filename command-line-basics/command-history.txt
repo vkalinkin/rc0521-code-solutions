@@ -1,0 +1,395 @@
+    1  git config --global user.name "Victor Kalinkin"
+    2  git config --global user.email "vakalinkin@hotmail.com"
+    3  git config --global --list
+    4  pwd
+    5  cd
+    6  ls
+    7  pwd
+    8  cd repos
+    9  ls
+   10  pwd
+   11  ls
+   12  cd rc0521-code-solutions/
+   13  git status
+   14  git checkout master
+   15  git checkout -b http-messages
+   16  pwd
+   17  git checkout master
+   18  git checkout http-messages 
+   19  pwd
+   20  ls
+   21  cd http-messages/
+   22  http http://www.example.com
+   23  https httpies.io/hello
+   24  http --help
+   25  https httpie.io/hello
+   26  http httpie.io/hello
+   27  http--verbose http://example.com
+   28  http --verbose http://example.com
+   29  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   30  http --body GET http://example.com > index.html
+   31  git status
+   32  git add index.html 
+   33  git add users.json 
+   34  git commit -m "Victor K http-messages (1st submission)"
+   35  git push origin http-messages 
+   36  git checkout master
+   37  git pull origin master
+   38  git checkout -b javascript-ajax
+   39  git status
+   40  git add javascirpt-ajax
+   41  pwd
+   42  cd repos
+   43  cd
+   44  cd repos
+   45  ls
+   46  cd rc0521-code-solutions/
+   47  ls
+   48  git add javascript-ajax/
+   49  git status
+   50  git commit -m "Victor K javascript-ajax (1st submission)"
+   51  git push origin javascript-ajax 
+   52  git checkout master
+   53  git pull origin master
+   54  cd repos
+   55  ls
+   56  git clone https://github.com/vkalinkin/ajax-project.git
+   57  ls
+   58  cd ajax-project/
+   59  npm ci
+   60  git status
+   61  git checkout -b "issue-1-user-can-search"
+   62  git status
+   63  git add index.html 
+   64  git add js/main.js 
+   65  git commit -m "added basic HTML skeleton and page populates with show titles based on search term"
+   66  git add js/main.js 
+   67  git commit -m "added basic HTML skeleton and page populates with show titles based on search term"
+   68  git push origin issue-1-user-can-search 
+   69  git status
+   70  git add js/main.js 
+   71  git commit -m "image, year, type, episode count of show populate list in html"
+   72  git add js/main.js 
+   73  git commit -m "image, year, type, episode count of show populate list in html"
+   74  git add js/main.js 
+   75  git commit -m "image, year, type, episode count of show populate list in html"
+   76  git push origin issue-1-user-can-search 
+   77  git status
+   78  git add css/styles.css 
+   79  git add index.html 
+   80  git add js/main.js 
+   81  git commit -m "Basic search box works, user enters in term and presses search and data is populated"
+   82  git add js/main.js 
+   83  git commit -m "Basic search box works, user enters in term and presses search and data is populated"
+   84  git push origin issue-1-user-can-search 
+   85  git status
+   86  git add index.html 
+   87  git add js/main.js 
+   88  git commit -m "Search has submit button instead of div"
+   89  git add js/main.js 
+   90  git commit -m "Search has submit button instead of div"
+   91  git push origin issue-1-user-can-search 
+   92  cd repos
+   93  ls
+   94  cd ajax-project/
+   95  git status
+   96  git add css/layout.css 
+   97  git add css/styles.css 
+   98  git add index.html 
+   99  git add js/main.js 
+  100  git commit -m "completed feature and added css styling"
+  101  git add index.html 
+  102  git commit -m "completed feature and added css styling"
+  103  git push origin issue-1-user-can-search 
+  104  git checkout master
+  105  git pull origin master
+  106  git checkout -b issue-2-user-can-get-recent-anime
+  107  git status
+  108  add css/layout.css 
+  109  add css/styles.css 
+  110  add index.html 
+  111  add js/main.js 
+  112  git commit -m "added html for season select, view swapping works bewtten season and term search"
+  113  git add css/layout.css 
+  114  git add css/styles.css 
+  115  git add index.html 
+  116  git add js/main.js 
+  117  git commit -m "added html for season select, view swapping works bewtten season and term search"
+  118  git push origin issue-2-user-can-get-recent-anime 
+  119  git status
+  120  git add css/layout.css 
+  121  git add css/styles.css 
+  122  git add index.html 
+  123  git add js/main.js 
+  124  git commit -m "completed feature, extra CSS styling and refining JS code"
+  125  git push origin issue-2-user-can-get-recent-anime 
+  126  git checkout master
+  127  git pull origin master
+  128  checkout -b "issue-3-user-can-see-previous-seasons"
+  129  git checkout -b "issue-3-user-can-see-previous-seasons"
+  130  git status
+  131  git add css/styles.css 
+  132  git add index.html 
+  133  git commit -m "added new html for current or past season radio buttons and drop downs for past seasons"
+  134  git push origin issue-3-user-can-see-previous-seasons 
+  135  git status
+  136  git add index.html 
+  137  git add js/main.js 
+  138  git commit -m "past season drop downs only visible when past season radio button is selected"
+  139  git push origin issue-3-user-can-see-previous-seasons 
+  140  git status
+  141  git add js/main.js 
+  142  git commit -m "past shows populate list based on season and year chosen from drop downs"
+  143  git push origin issue-3-user-can-see-previous-seasons 
+  144  git status
+  145  git add css/styles.css 
+  146  git add index.html 
+  147  git commit -m "completed feature, extra CSS stylings"
+  148  git push origin issue-3-user-can-see-previous-seasons 
+  149  git status
+  150  git checkout master
+  151  git pull origin master
+  152  cd repos
+  153  ls
+  154  cd ajax-project/
+  155  git checkout -b issue-4-user-can-get-more-info
+  156  git status
+  157  git add css/layout.css 
+  158  git add css/styles.css 
+  159  git add js/main.js 
+  160  git commit -m "added JS and CSS to have a More Info button for populated entries"
+  161  git push origin issue-4-user-can-get-more-info 
+  162  git status
+  163  git add css/layout.css 
+  164  git add index.html 
+  165  git commit -m "set up a basic modal skeleton"
+  166  git push orign issue-4-user-can-get-more-info 
+  167  git push origin issue-4-user-can-get-more-info 
+  168  git status
+  169  git add index.html 
+  170  git add js/main.js 
+  171  git commit -m "modal appears when the More Info button is pressed"
+  172  git push origin issue-4-user-can-get-more-info 
+  173  git status
+  174  git add js/main.js 
+  175  git commit -m "Made 2 new functions that call the API with the specific series id when the more info button is clicked"
+  176  git add js/main.js 
+  177  git commit -m "Made 2 new functions that call the API with the specific series id when the more info button is clicked"
+  178  git push origin issue-4-user-can-get-more-info 
+  179  git status
+  180  git add css/layout.css 
+  181  git add index.html 
+  182  git add js/main.js 
+  183  git commit -m "Modal is populated with extra info for anime series if More Info button clicked"
+  184  git push origin issue-4-user-can-get-more-info 
+  185  git status
+  186  git commit js/main.js 
+  187  cd repos
+  188  ls
+  189  cd ajax-project/
+  190  git status
+  191  git add js/main.js 
+  192  git commit -m "Added OK button to anime modal that closes it. Modal only shows 1 series at a time"
+  193  git push origin issue-4-user-can-get-more-info 
+  194  git status
+  195  git add js/main.js 
+  196  git commit -m "More Info button pulls info for manga series too"
+  197  git push origin issue-4-user-can-get-more-info 
+  198  cd repos
+  199  ls
+  200  cd ajax-project/
+  201  git status
+  202  git add js/main.js 
+  203  git commit -m "can switch between the search bar view and My List View"
+  204  git push origin issue-5-user-can-save-favorites 
+  205  git status
+  206  git add js/data.js 
+  207  git add js/main.js 
+  208  git commit -m "solid stars show up in search results for anime series already in faves"
+  209  git status
+  210  git add js/main.js 
+  211  git commit -m "solid stars show up in search results for anime series already in faves"
+  212  git add js/main.js 
+  213  git commit -m "solid stars show up in search results for anime series already in faves"
+  214  git push origin issue-5-user-can-save-favorites 
+  215  git status
+  216  git add js/main.js 
+  217  git commit -m "solid star show up in search results for manga and season search results for already faved series too"
+  218  git push origin issue-5-user-can-save-favorites 
+  219  cd repos
+  220  ls
+  221  cd ajax-project/
+  222  git a
+  223  git status
+  224  git add css/layout.css 
+  225  git add css/styles.css 
+  226  git add index.html 
+  227  git add js/data.js 
+  228  git add js/main.js 
+  229  git commit -m "completed extra CSS stylings"
+  230  git status
+  231  git add js/main.js 
+  232  git commit -m "completed extra CSS stylings"
+  233  git push origin issue-5-user-can-save-favorites 
+  234  git status
+  235  git checkout -b extra-issues
+  236  git status
+  237  git add js/main.js 
+  238  git commit -m "seperated dom tree build functions from xhr request functions"
+  239  git add js/main.js 
+  240  git commit -m "seperated dom tree build functions from xhr request functions"
+  241  git push origin extra-issues 
+  242  cd repos
+  243  ls
+  244  cd ajax-project/
+  245  git checkout master
+  246  git status
+  247  git add css/
+  248  git add css/styles.css 
+  249  git add index.html 
+  250  git add js/main.js 
+  251  git commit -m "prelim extra stylings"
+  252  git add js/main.js 
+  253  git commit -m "prelim extra stylings"
+  254  git push origin extra-issues 
+  255  git checkout master
+  256  git pull origin master
+  257  git checkout extra-issues 
+  258  git checkout master
+  259  git checkout extra-issues 
+  260  cd
+  261  ls
+  262  cd repos
+  263  ls
+  264  cd ajax-project/
+  265  git status
+  266  git add js/main.js 
+  267  git commit -m "Modified Manga search to use v4 of API"
+  268  git push origin extra-issues 
+  269  gitstatus
+  270  git status
+  271  git add index.html 
+  272  git commit "added html for nsfw content filter radio buttons"
+  273  git commit -m "added html for nsfw content filter radio buttons"
+  274  git push origin extra-issues 
+  275  git status
+  276  git add index.html 
+  277  git add js/main.js 
+  278  git commit -m "for anime term search, nsfw results not shown if radio button selected"
+  279  git push origin extra-issues 
+  280  git status
+  281  git add js/main.js 
+  282  git commit -m "for anime season search, nsfw results not shown if radio button selected"
+  283  git push origin extra-issues 
+  284  cd repos
+  285  ls
+  286  cd ajax-project/
+  287  git status
+  288  git add js/main.js 
+  289  git commit -m "for manga term search, nsfw results not shown if radio button selected"
+  290  git push origin extra-issues 
+  291  git status
+  292  git add js/main.js 
+  293  git commit -m "fixed bug where More Info modal doesn't appear if manga has pub date of null"
+  294  git push origin extra-issues 
+  295  git status
+  296  git add index.html 
+  297  git add js/main.js 
+  298  git commit -m "fixed bug where My List doesn't show images for manga and removed comments from code"
+  299  git push origin extra-issues 
+  300  git status
+  301  git add css/styles.css 
+  302  git add index.html 
+  303  git commit -m "added additional styling"
+  304  git push origin extra-issues 
+  305  git checkout master 
+  306  git pull origin master
+  307  git status
+  308  git checkout -b additional
+  309  git status
+  310  git add css/styles.css 
+  311  git add index.html 
+  312  git commit -m "added animation to anime & manga result boxes that populate page"
+  313  git push origin additional 
+  314  cd repos
+  315  ls
+  316  cd ajax-project/
+  317  git status
+  318  git add css/styles.css 
+  319  git add index.html 
+  320  git add js/main.js 
+  321  git commit -m "can remove manga faves from manga term search results by clicking on solid star"
+  322  git status
+  323  git add js/main.js 
+  324  git commit -m "can remove manga faves from manga term search results by clicking on solid star"
+  325  git push origin additional 
+  326  git status
+  327  git add js/main.js 
+  328  git commit -m "can remove anime faves from anime season or term results by clicking on solid star"
+  329  git push origin additional 
+  330  git status
+  331  git add js/main.js 
+  332  git commit -m "added solid stars to each entry in My List results"
+  333  git push origin additional 
+  334  git status
+  335  git add css/layout.css 
+  336  git add css/styles.css 
+  337  git commit -m "brightened background color and results centered in mobile view"
+  338  git push origin additional 
+  339  git status
+  340  git add css/layout.css 
+  341  git add css/styles.css 
+  342  git add js/main.js 
+  343  git commit -m "can remove favorites from the My List results section"
+  344  git push origin additional 
+  345  git status
+  346  git add css/styles.css 
+  347  git add index.html 
+  348  git add js/main.js 
+  349  git commit -m "added a title to resultsList that describes the results (anime,manga,season,MyList)"
+  350  git add js/main.js 
+  351  git status
+  352  git commit -m "added a title to resultsList that describes the results (anime,manga,season,MyList)"
+  353  git push origin additional 
+  354  git status
+  355  git add css/layout.css 
+  356  git add css/styles.css 
+  357  git add index.html 
+  358  git add js/main.js 
+  359  git commit -m "Added cursor pointer to clickable elements and some hover transitions"
+  360  git push origin additional 
+  361  git status
+  362  git add css/layout.css 
+  363  git add index.html 
+  364  git commit -m "adding minor positioning on radio buttons"
+  365  git push origin additional 
+  366  git status
+  367  git add js/main.js 
+  368  git commit -m "fixed bug where if anime faved from season search it has undef year in My List"
+  369  git push origin additional 
+  370  git status
+  371  git add css/layout.css 
+  372  git add css/styles.css 
+  373  git commit -m "minor css tweaks and color transitions on star hover"
+  374  git push origin additional 
+  375  git status
+  376  git add css/styles.css 
+  377  git commit -m "removed comments"
+  378  git push origin additional 
+  379  git status
+  380  git checkout master
+  381  git pull origin master
+  382  history
+  383  man history
+  384  history
+  385  man history
+  386  historyu
+  387  history
+  388  cd
+  389  cd repos
+  390  ls
+  391  cd rc0521-code-solutions/
+  392  cd command-line-basics/
+  393  history
+  394  ls
+  395  history > command-history.txt
