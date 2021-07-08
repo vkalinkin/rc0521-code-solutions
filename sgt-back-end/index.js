@@ -214,32 +214,19 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
 
   } else {
     const sql = `
-     delete from "grades"
-     where "gradeId" = $1
-     returning *
-  `;
-    const params = [gradeId];
+    update "grades"
+    set "name" = $1,
+    "course"= $2,
+    "score" = $3
+    where "gradeId" = $4
+    returning *
+    `;
+    const params = [newName, newCourse, newScore, gradeId];
     db.query(sql, params)
       .then(result => {
         const grade = result.rows;
         if (grade && grade.length > 0) {
-          const sql2 = `insert into "grades"
-          ("name", "course", "score")
-          values ($1, $2, $3)
-          returning *
-          `;
-          const params2 = [newName, newCourse, newScore];
-          db.query(sql2, params2)
-            .then(result => {
-              const grade = result.rows[0];
-              res.json(grade);
-            })
-            .catch(err => {
-              console.error(err);
-              res.status(500).json({
-                error: 'An unexpected error occurred.'
-              });
-            });
+          res.sendStatus(200);
         } else {
           res.status(404).json({
             error: `Cannot find grade with "gradeId" ${gradeId}`
