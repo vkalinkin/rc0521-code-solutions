@@ -15,8 +15,8 @@ class ToggleSwitch extends React.Component {
     }
   }
 
-  render() {
-    let className = 'toggle off';
+  changeNames() {
+    let className;
     let spanText;
     let circleName;
     if (this.state.isOn) {
@@ -28,10 +28,22 @@ class ToggleSwitch extends React.Component {
       circleName = 'circle left';
       spanText = 'OFF';
     }
+    const names = {
+      class: className,
+      circle: circleName,
+      span: spanText
+    };
+    return names;
+
+  }
+
+  render() {
+    const currentNames = this.changeNames();
+
     return <div className="base">
-      <div className={className} onClick={this.handleClick}></div>
-      <div className={circleName}></div>
-      <span><h2>{spanText}</h2></span>
+      <div className={currentNames.class} onClick={this.handleClick}></div>
+      <div className={currentNames.circle}></div>
+      <span><h2>{currentNames.span}</h2></span>
     </div>;
   }
 }
