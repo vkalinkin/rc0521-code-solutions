@@ -1,0 +1,43 @@
+.base {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.toggle {
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  border: black solid 2px;
+}
+
+.on {
+  background-color: #6aa84f;
+}
+
+.off {
+  background-color: #e2e2e2;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: black solid 2px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.left {
+  top: 8px;
+  left: 8px;
+}
+
+.right {
+  top: 8px;
+  left: 58px;
+}
+
+span {
+  margin-left: 10px;
+}
