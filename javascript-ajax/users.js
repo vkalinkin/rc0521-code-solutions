@@ -13,3 +13,10 @@ xhr.addEventListener('load', function () {
   }
 });
 xhr.send();
+
+// for (var a = 2017; a > 1962; a--){
+//   var currentLine = document.createElement('li');
+//   currentLine.textContent = '<option value="' + a + '">' + a + '</option>';
+//   $userList.appendChild(currentLine);
+
+// }
