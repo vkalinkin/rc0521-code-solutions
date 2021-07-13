@@ -42,12 +42,9 @@ body {
   border-radius: 4px;
   margin-top: 5px;
   margin-left: 5px;
-
-  /* text-justify: auto; */
 }
 
 .modal {
-  /* display: none; */
   z-index: 1;
   height: 100%;
   width: 100%;
