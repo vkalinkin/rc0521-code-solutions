@@ -228,15 +228,15 @@
 // xhr.send();
 
 // WORKS
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://lfz-cors.herokuapp.com/?url=https://rebrickable.com/api/v3/lego/sets/?min_year=2019&min_parts=400&max_parts=1000');
-xhr.setRequestHeader('token', 'abc123');
-xhr.setRequestHeader('Authorization', 'key c28b7dc8af7ffa9abe1d112bba0ea07e');
-xhr.responseType = 'json';
-xhr.addEventListener('load', function () {
-  console.log(xhr.response);
-});
-xhr.send();
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', 'https://lfz-cors.herokuapp.com/?url=https://rebrickable.com/api/v3/lego/sets/?min_year=2019&min_parts=400&max_parts=1000');
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.setRequestHeader('Authorization', 'key c28b7dc8af7ffa9abe1d112bba0ea07e');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
 
 // var xhr = new XMLHttpRequest();
 // xhr.open('GET', "https://lfz-cors.herokuapp.com/?url=https://rebrickable.com/api/v3/lego/sets/?&min_year=2019&min_parts=400&max_parts=1000");
@@ -290,7 +290,107 @@ xhr.send();
 
 // WORKS!
 // var xhr = new XMLHttpRequest();
-// xhr.open('GET', "https://www.cheapshark.com/api/1.0/games?title=devil-may-cry&limit=60");
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/games?title=devil-may-cry&upperPrice=30&limit=60");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/games?title=devil-may-cry&upperPrice=30&limit=60");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/deals?title=devil-may-cry&Price=30&upperPrice=40");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://www.cheapshark.com/api/1.0/deals?title=lego&lowerPrice=5upperPrice=20');
+xhr.setRequestHeader('token', 'abc123');
+xhr.responseType = 'json';
+xhr.addEventListener('load', function () {
+  console.log(xhr.response);
+});
+xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/deals?title=street-fighter");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// 7JWDpApz3Yee5JDgO2UrtekSUc5XIOvkX6pwVcI % 2B9xQ % 3D
+// https://www.cheapshark.com/api/1.0/deals?id=X8sebHhbc1Ga0dTkgg59WgyM506af9oNZZJLU9uSrX8%3D
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/deals?id=7JWDpApz3Yee5JDgO2UrtekSUc5XIOvkX6pwVcI%2B9xQ%3D");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/stores");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+
+// });
+// xhr.send();
+
+// var storeArray = [];
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/stores");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+//   var responseArray = xhr.respone;
+//   console.log(responseArray);
+// });
+// xhr.send();
+// for (var a =0; a < xhr.response.length; a++){
+//   console.log(xhr.response[a]);
+// }
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/alerts?action=set&email=vakalinkin@hotmail.comg&gameID=147207&price=29.99");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/alerts?action=delete&email=vakalinkin@hotmail.comg&gameID=104221&price=29.99");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/alerts?action=manage&email=vakalinkin@hotmail.com");
 // xhr.setRequestHeader('token', 'abc123');
 // xhr.responseType = 'json';
 // xhr.addEventListener('load', function () {
@@ -300,6 +400,33 @@ xhr.send();
 
 // var xhr = new XMLHttpRequest();
 // xhr.open('GET', "https://www.cheapshark.com/api/1.0/games?title=street-fighter&limit=60");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/games?title=metal-gear&limit=60");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/games?title=resident-evil&limit=60");
+// xhr.setRequestHeader('token', 'abc123');
+// xhr.responseType = 'json';
+// xhr.addEventListener('load', function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', "https://www.cheapshark.com/api/1.0/deals?title=lego&lowerPrice=7");
 // xhr.setRequestHeader('token', 'abc123');
 // xhr.responseType = 'json';
 // xhr.addEventListener('load', function () {

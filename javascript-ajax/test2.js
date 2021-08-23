@@ -32,8 +32,8 @@ xhr.addEventListener('load', function () {
   console.log(xhr.response);
   // var results = xhr.response.results;
   // var results = xhr.response.anime;
-  var results = xhr.response.data;
-  // console.log('var Results:', results);
+  var results = xhr.response;
+  console.log('var Results:', results);
 
   for (var a = 0; a < results.length; a++) {
     var seriesObj = {};
