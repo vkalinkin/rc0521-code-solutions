@@ -1,0 +1,17 @@
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: black solid 2px;
+}
+
+h2 {
+  position: absolute;
+  left: 52px;
+  top: 25px;
+}
+
+.fas {
+  margin-top: 10px;
+  margin-left: 45px;
+}
