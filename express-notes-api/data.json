@@ -1,5 +1,5 @@
 {
-  "nextId": 23,
+  "nextId": 22,
   "notes": {
     "2": {
       "id": 2,
@@ -19,15 +19,7 @@
     },
     "17": {
       "id": "17",
-      "content": "Hello! How are you today?"
-    },
-    "19": {
-      "id": "19",
-      "content": "Test Five"
-    },
-    "22": {
-      "id": "22",
-      "content": "Test Six"
+      "content": "Hi! How are you today!"
     }
   }
 }
