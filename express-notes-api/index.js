@@ -17,22 +17,22 @@ app.use(express.json());
 app.get('/api/notes/:id', function (req, res) {
   const currentId = req.params.id;
   const notesData = notes.notes;
-  let foundId = false;
   const integerId = parseInt(currentId);
 
   if (integerId < 0 || isNaN(integerId)) {
-    res.status(400).send('"error": "id must be a positive integer"');
+    const error = 'id must be a positive integer';
+    const returnError = { error };
+    res.status(400).json(returnError);
   } else {
-    for (const property in notesData) {
-      if (property === currentId) {
-        foundId = true;
-        res.json(notesData[property]);
-        fs.writeFile('data.json');
-        break;
-      }
+    if (notesData[currentId]) {
+      const returnNote = notesData[currentId];
+      res.status(200).json(returnNote);
+
     }
-    if (foundId === false) {
-      res.status(404).send(`"error": "cannot find note with id ${currentId}"`);
+    if (!notesData[currentId]) {
+      const error = `cannot find note with id: ${currentId}`;
+      const returnError = { error };
+      res.status(404).json(returnError);
     }
   }
 });
@@ -40,8 +40,10 @@ app.get('/api/notes/:id', function (req, res) {
 app.post('/api/notes', function (req, res) {
   const message = req.body;
   const msg = message.content;
-  if (msg === undefined) {
-    res.status(400).send('"error": "content is a required field"');
+  if (!msg) {
+    const error = 'content is a required field';
+    const returnError = { error };
+    res.status(400).json(returnError);
   } else {
     const currentId = notes.nextId;
     const newNoteObject = {};
@@ -54,7 +56,9 @@ app.post('/api/notes', function (req, res) {
     const newData = JSON.stringify(notes, null, 2);
     fs.writeFile('data.json', newData, 'utf8', err => {
       if (err) {
-        return res.status(500).send('"error": "An unexpected error occurred."');
+        const error = 'An unexpected error occured.';
+        const returnError = { error };
+        res.status(500).json(returnError);
       }
       res.status(201).json(newNoteObject);
     });
@@ -65,27 +69,28 @@ app.delete('/api/notes/:id', function (req, res) {
   const currentId = req.params.id;
   const integerId = parseInt(currentId);
   const notesData = notes.notes;
-  let foundId = false;
 
   if (integerId < 0 || isNaN(integerId)) {
-    res.status(400).send('"error": "id must be a positive integer"');
+    const error = 'id must be a positive integer';
+    const returnError = { error };
+    res.status(400).json(returnError);
   } else {
-    for (const property in notesData) {
-      if (property === currentId) {
-        foundId = true;
-        delete notesData[currentId];
-        const newData = JSON.stringify(notes, null, 2);
-        fs.writeFile('data.json', newData, 'utf8', err => {
-          if (err) {
-            return res.status(500).send('"error": "An unexpected error occurred."');
-          }
-          res.sendStatus(204);
-        });
-        break;
-      }
-    }
-    if (foundId === false) {
-      res.status(404).send(`"error": "cannot find note with id ${currentId}"`);
+
+    if (notesData[currentId]) {
+      delete notesData[currentId];
+      const newData = JSON.stringify(notes, null, 2);
+      fs.writeFile('data.json', newData, 'utf8', err => {
+        if (err) {
+          const error = 'An unexpected error occured.';
+          const returnError = { error };
+          res.status(500).json(returnError);
+        }
+        res.sendStatus(204);
+      });
+    } else {
+      const error = `cannot find note with id: ${currentId}`;
+      const returnError = { error };
+      res.status(404).json(returnError);
     }
   }
 });
@@ -96,35 +101,39 @@ app.put('/api/notes/:id', function (req, res) {
   const notesData = notes.notes;
   const message = req.body;
   const msg = message.content;
-  let foundId = false;
 
   if (integerId < 0 || isNaN(integerId)) {
-    res.status(400).send('"error": "id must be a positive integer"');
+    const error = 'id must be a positive integer';
+    const returnError = { error };
+    res.status(400).json(returnError);
   } else if (msg === undefined) {
-    res.status(400).send('"error": "content is a required field"');
+    const error = 'content is a required field';
+    const returnError = { error };
+    res.status(400).json(returnError);
   } else {
-    for (const property in notesData) {
-      if (property === currentId) {
-        foundId = true;
-        delete notesData[currentId];
-        const newNoteObject = {};
-        newNoteObject.id = currentId;
-        newNoteObject.content = msg;
 
-        notes.notes[currentId] = newNoteObject;
+    if (notesData[currentId]) {
+      delete notesData[currentId];
+      const newNoteObject = {};
+      newNoteObject.id = currentId;
+      newNoteObject.content = msg;
 
-        const newData = JSON.stringify(notes, null, 2);
-        fs.writeFile('data.json', newData, 'utf8', err => {
-          if (err) {
-            return res.status(500).send('"error": "An unexpected error occurred."');
-          }
-          res.sendStatus(204);
-        });
-        break;
-      }
-    }
-    if (foundId === false) {
-      res.status(404).send(`"error": "cannot find note with id ${currentId}"`);
+      notes.notes[currentId] = newNoteObject;
+
+      const newData = JSON.stringify(notes, null, 2);
+
+      fs.writeFile('data.json', newData, 'utf8', err => {
+        if (err) {
+          const error = 'An unexpected error occured.';
+          const returnError = { error };
+          res.status(500).json(returnError);
+        }
+        res.sendStatus(204);
+      });
+    } else {
+      const error = `cannot find note with id: ${currentId}`;
+      const returnError = { error };
+      res.status(404).json(returnError);
     }
   }
 });
