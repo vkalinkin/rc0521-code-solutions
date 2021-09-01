@@ -1,0 +1,41 @@
+/* .topic {
+  border: black solid 2px;
+}
+
+.closed {
+  display: none;
+} */
+
+#accordion {
+  margin-top: 20px;
+}
+
+.tab {
+  .title {
+    padding: 10px;
+    background-color: #f4f4f4;
+  }
+
+  .content {
+    padding: 10px;
+    border: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #f4f4f4;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.jc-btwn {
+  justify-content: space-between;
+}
