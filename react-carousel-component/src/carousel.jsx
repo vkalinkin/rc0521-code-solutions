@@ -6,55 +6,85 @@ class Carousel extends React.Component {
     super(props);
     this.state = {
       openImage: 0,
-      seconds: 0
+      circleNames: ['fas fa-circle', 'far fa-circle', 'far fa-circle', 'far fa-circle', 'far fa-circle']
     };
     this.secondsInterval = null;
     this.startTime = this.startTime.bind(this);
     this.changeImageRight = this.changeImageRight.bind(this);
+    this.displayImage = this.displayImage.bind(this);
+    this.displayCircles = this.displayCircles.bind(this);
+    this.stopTime = this.stopTime.bind(this);
+    this.handleRightClick = this.handleRightClick.bind(this);
+    this.handleLeftClick = this.handleLeftClick.bind(this);
+    this.handleCircleClick = this.handleCircleClick.bind(this);
   }
 
   displayImage() {
-    // console.log('displayImage fired');
     const images = this.props.images;
     const currentImage = images[this.state.openImage];
     return currentImage;
   }
 
+  displayCircles() {
+    const circleId = this.state.openImage;
+    const newCircles = ['far fa-circle', 'far fa-circle', 'far fa-circle', 'far fa-circle', 'far fa-circle'];
+    newCircles[circleId] = 'fas fa-circle';
+    return newCircles;
+  }
+
   changeImageRight() {
-    // console.log('props', this.props);
-    // console.log('state', this.state);
-    // console.log('changeImageRight fired');
-
-    // console.log('this.props.openImage', this.props.openImage);
-
-    // console.log('this.state.openImage', this.state.openImage);
-
-    // let currentImageId = this.props.openImage;
     let currentImageId = this.state.openImage;
-
-    // console.log("currentImageId 1", currentImageId);
-
-    // let currentImageId = this.state.openImage;
-
-    // currentImageId++;
-    // console.log("currentImageId 2", currentImageId);
-    // this.setState({ openImage: currentImageId });
 
     if (currentImageId === 4) {
       this.setState({ openImage: 0 });
-      // console.log("currentImageId 2", currentImageId);
     } else {
       currentImageId++;
-      // console.log("currentImageId 2", currentImageId);
       this.setState({ openImage: currentImageId });
     }
-    // this.displayImage();
-    // this.displayImage;
+  }
+
+  changeImageLeft() {
+    let currentImageId = this.state.openImage;
+    if (currentImageId === 0) {
+      this.setState({ openImage: 4 });
+    } else {
+      currentImageId--;
+      this.setState({ openImage: currentImageId });
+    }
+  }
+
+  changeImageCircle(newId) {
+    this.setState({ openImage: newId });
+  }
+
+  stopTime() {
+    clearInterval(this.secondsInterval);
+  }
+
+  handleRightClick() {
+    this.changeImageRight();
+    this.stopTime();
+    this.startTime();
+  }
+
+  handleLeftClick() {
+    this.changeImageLeft();
+    this.stopTime();
+    this.startTime();
+  }
+
+  handleCircleClick(event) {
+    const circleId = parseInt(event.target.getAttribute('circle'));
+    const newCircles = ['far fa-circle', 'far fa-circle', 'far fa-circle', 'far fa-circle', 'far fa-circle'];
+    newCircles[circleId] = 'fas fa-circle';
+    this.setState({ circleNames: newCircles });
+    this.changeImageCircle(circleId);
+    this.stopTime();
+    this.startTime();
   }
 
   startTime() {
-    // console.log('startTime fired');
-    this.secondsInterval = setInterval(this.changeImageRight, 8000);
+    this.secondsInterval = setInterval(this.changeImageRight, 3000);
   }
 
   componentDidMount() {
@@ -62,19 +92,22 @@ class Carousel extends React.Component {
   }
 
   render() {
-    // this.startTime();
-
     const currentImage = this.displayImage();
+    const currentCircles = this.displayCircles();
 
-    return <div>
-      <div>carousel</div>
-      <div className="row">
-        <i className="fas fa-chevron-left"></i>
-        {/* <img src={this.props.image01}></img> */}
+    return <div className="carousel">
+      <div className="row top">
+        <i className="fas fa-chevron-left" onClick={this.handleLeftClick}></i>
         <img src={currentImage}></img>
-        <i className="fas fa-chevron-right"></i>
+        <i className="fas fa-chevron-right" onClick={this.handleRightClick}></i>
       </div>
-      <div className="row"></div>
+      <div className="row bottom">
+        <i circle="0" className= {currentCircles[0]} onClick={this.handleCircleClick}></i>
+        <i circle="1" className= {currentCircles[1]} onClick={this.handleCircleClick}></i>
+        <i circle="2" className= {currentCircles[2]} onClick={this.handleCircleClick}></i>
+        <i circle="3" className= {currentCircles[3]} onClick={this.handleCircleClick}></i>
+        <i circle="4" className= {currentCircles[4]} onClick={this.handleCircleClick}></i>
+      </div>
     </div>;
   }
 
