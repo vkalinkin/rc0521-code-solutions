@@ -1,0 +1,23 @@
+.carousel {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border: black solid 4px;
+}
+
+.row {
+  display: flex;
+}
+
+.top {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bottom {
+  justify-content: center;
+}
+
+.fa-circle {
+  margin: 5px;
+}
