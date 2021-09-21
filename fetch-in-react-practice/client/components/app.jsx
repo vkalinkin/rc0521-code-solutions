@@ -22,7 +22,6 @@ export default class App extends React.Component {
     fetch('/api/todos')
       .then(response => response.json())
       .then(data => this.setState({ todos: data }));
-    // .then(data => console.log(data))
   }
 
   addTodo(newTodo) {
@@ -41,9 +40,6 @@ export default class App extends React.Component {
     * of the old array, plus the object returned by the server.
     */
     const data = newTodo;
-    this.setState(state => ({
-      todos: state.todos.concat([newTodo])
-    }));
 
     fetch('/api/todos', {
       method: 'POST',
@@ -53,9 +49,13 @@ export default class App extends React.Component {
       body: JSON.stringify(data)
     })
       .then(response => response.json())
-    // .then(data => {
-    //   console.log('Sucess:', data);
-    // })
+
+      .then(data => {
+        this.setState(state => ({
+          todos: state.todos.concat([data])
+        }));
+      })
+
       .catch(error => {
         console.error('Error:', error);
       });
@@ -89,7 +89,6 @@ export default class App extends React.Component {
         matchingToDo = currentToDo;
         matchingToDo.isCompleted = !matchingToDo.isCompleted;
         data = matchingToDo;
-        // console.log('data', data);
         break;
       }
     }

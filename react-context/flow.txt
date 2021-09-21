@@ -1,0 +1,17 @@
+User can sign up.
+The frontend uses hash routing to redirect the user across different pages. Clicking the signup link changes that hash in the url to #sign-up and via renderPage() on app.jsx goes to the auth page.
+The auth page shows the welcome message based on the route pased down by App Context(sign in page or register page). Authform also shows a different key, action,
+and onSignin based on the route from App Context.
+Entering in the username and password creates an sql query to insert the new username and password into the table.
+
+User can sign in.
+The frontend uses hash routing to redirect the user across different pages. Clicking the sign in link changes that hash in the url to #sign-in and via renderPage() on app.jsx goes to the auth page.
+The auth page shows the welcome message based on the route pased down by App Context (sign in page or register page). Authform also shows a different key, action,
+and onSignin based on the route from App Context.
+Entering in the username and password creates runs the middleware code to check if there is a username and hashed password that match what was entered.
+
+User can stay signed in (even if they refresh the page).
+The frontend uses hash routing to redirect the user across different pages. If the sign in was successful that hash changes to # and via renderPage() on app.jsx goes to the home page, which has the gif.
+
+User can sign out.
+The frontend uses hash routing to redirect the user across different pages. Clicking the sign in link changes that hash in the url to #sign-in and via renderPage() on app.jsx goes to the auth page.
